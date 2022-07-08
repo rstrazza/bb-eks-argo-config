@@ -3,6 +3,6 @@ spec:
     server: https://kubernetes.default.svc
   apps:
     pyApp:
-      repoURL: git@github.com:rstrazza/py-app.git
+      repoURL: https://github.com/rstrazza/py-app.git
       targetRevision: main
       path: k8s/dev
