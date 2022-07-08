@@ -8,13 +8,13 @@ metadata:
 spec:
   project: py-app
   destination:
-    namespace: blue-team
-    server: {{ .Values.spec.destination.server }}
+    namespace: default
+    server: { { .Values.spec.destination.server } }
   source:
-    repoURL: {{ .Values.spec.apps.pyApp.repoURL }}
-    targetRevision: {{ .Values.spec.apps.pyApp.targetRevision }}
-    path: {{ .Values.spec.apps.pyApp.path }}
-    
+    repoURL: { { .Values.spec.apps.pyApp.repoURL } }
+    targetRevision: { { .Values.spec.apps.pyApp.targetRevision } }
+    path: { { .Values.spec.apps.pyApp.path } }
+
   syncPolicy:
     automated:
       prune: true
