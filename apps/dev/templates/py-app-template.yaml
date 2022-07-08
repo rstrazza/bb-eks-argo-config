@@ -9,11 +9,11 @@ spec:
   project: py-app
   destination:
     namespace: default
-    server: { { .Values.spec.destination.server } }
+    server: {{ .Values.spec.destination.server }}
   source:
-    repoURL: { { .Values.spec.apps.pyApp.repoURL } }
-    targetRevision: { { .Values.spec.apps.pyApp.targetRevision } }
-    path: { { .Values.spec.apps.pyApp.path } }
+    repoURL: {{ .Values.spec.apps.pyApp.repoURL }}
+    targetRevision: {{ .Values.spec.apps.pyApp.targetRevision }}
+    path: {{ .Values.spec.apps.pyApp.path }}
 
   syncPolicy:
     automated:
