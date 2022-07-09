@@ -5,7 +5,7 @@ spec:
     pyApp:
       repoURL: https://github.com/rstrazza/py-app.git
       targetRevision: main
-      path: k8s/dev
+      path: k8s/test
       destinations:
         namespace: blue
     prometheus:

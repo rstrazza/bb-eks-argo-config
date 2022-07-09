@@ -18,7 +18,7 @@ spec:
           enabled: true
           ingressClassName: nginx
           hosts:
-            - prometheus-dev.eks.strazza.dev
+            - prometheus-test.eks.strazza.dev
           paths:
             - /
     repoURL: {{ .Values.spec.apps.prometheus.repoURL }}
