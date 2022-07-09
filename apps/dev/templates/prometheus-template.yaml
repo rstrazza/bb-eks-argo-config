@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   destination:
-    namespace: namespace: {{ .Values.spec.apps.prometheus.destination.namespace }}
+    namespace: {{ .Values.spec.apps.prometheus.destination.namespace }}
     server: {{ .Values.spec.destination.server }}
   source:
     chart: prometheus

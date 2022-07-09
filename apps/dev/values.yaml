@@ -6,10 +6,10 @@ spec:
       repoURL: https://github.com/rstrazza/py-app.git
       targetRevision: main
       path: k8s/dev
-      destinations:
+      destination:
         namespace: blue
     prometheus:
       repoURL: https://prometheus-community.github.io/helm-charts
       targetRevision: 15.10.4
-      destinations:
+      destination:
         namespace: prometheus
