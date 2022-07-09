@@ -14,9 +14,9 @@ spec:
     repoURL: {{ .Values.spec.apps.pyApp.repoURL }}
     targetRevision: {{ .Values.spec.apps.pyApp.targetRevision }}
     path: {{ .Values.spec.apps.pyApp.path }}
-
   syncPolicy:
     automated:
       prune: true
+      selfHeal: true
     syncOptions:
       - CreateNamespace=true

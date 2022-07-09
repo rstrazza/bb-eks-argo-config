@@ -14,13 +14,11 @@ spec:
     chart: prometheus
     helm:
       values: |
-        pushgateway:
-          enabled: false
         ingress:
           enabled: true
           ingressClassName: nginx
           hosts:
-            - prometheus.eks.strazza.dev
+            - prometheus-dev.eks.strazza.dev
           paths:
             - /
     repoURL: {{ .Values.spec.apps.prometheus.repoURL }}
