@@ -16,6 +16,13 @@ spec:
       values: |
         pushgateway:
           enabled: false
+        ingress:
+          enabled: true
+          ingressClassName: nginx
+          hosts:
+            - prometheus.eks.strazza.dev
+          paths:
+            - /
     repoURL: {{ .Values.spec.apps.prometheus.repoURL }}
     targetRevision: {{ .Values.spec.apps.prometheus.targetRevision }}
   syncPolicy:
