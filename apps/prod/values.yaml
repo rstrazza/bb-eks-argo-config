@@ -5,12 +5,12 @@ spec:
     pyApp:
       repoURL: https://github.com/rstrazza/py-app.git
       targetRevision: main
-      path: k8s/test
+      path: k8s/prod
       destination:
         namespace: blue
     bbEksUtils:
       repoURL: https://github.com/rstrazza/bb-eks-utils.git
       targetRevision: main
-      path: k8s/test
+      path: k8s/prod
       destination:
         namespace: green

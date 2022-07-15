@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bb-eks-utils
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: {{ .Values.spec.apps.bbEksUtils.destination.namespace }}
+    server: {{ .Values.spec.destination.server }}
+  source:
+    repoURL: {{ .Values.spec.apps.bbEksUtils.repoURL }}
+    targetRevision: {{ .Values.spec.apps.bbEksUtils.targetRevision }}
+    path: {{ .Values.spec.apps.bbEksUtils.path }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
