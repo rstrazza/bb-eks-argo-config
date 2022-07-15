@@ -5,12 +5,11 @@ spec:
     pyApp:
       repoURL: https://github.com/rstrazza/py-app.git
       targetRevision: main
-      path: k8s/dev
+      path: k8s/test
       destination:
         namespace: blue
-    bbEksUtils:
-      repoURL: https://github.com/rstrazza/bb-eks-utils.git
-      targetRevision: main
-      path: k8s/dev
+    prometheus:
+      repoURL: https://prometheus-community.github.io/helm-charts
+      targetRevision: 15.10.4
       destination:
-        namespace: green
+        namespace: prometheus
